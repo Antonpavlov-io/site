@@ -26,8 +26,8 @@ const icon = (name: 'arrow' | 'shield' | 'spark' | 'book' | 'chart'): string => 
 const header = (activeRoute: Route, authenticated: boolean): string => `
   <header class="site-header">
     <a class="brand" href="#/dashboard" aria-label="Платформа обучения">
-      <span class="brand-mark"><i></i><i></i><i></i></span>
-      <span><strong>Пульс сервиса</strong><small>обучение в движении</small></span>
+      <span class="brand-logo" aria-label="НТС">НТС</span>
+      <span><strong>ООО «НТС»</strong><small>Обучение сотрудников<br>вагонов-ресторанов</small></span>
     </a>
     ${authenticated ? `
       <nav class="top-nav" aria-label="Основная навигация">
@@ -163,5 +163,7 @@ export const renderApp = (root: HTMLElement, state: PortalState): void => {
     profile: profileView(state),
   };
 
-  root.innerHTML = `${header(route, state.authenticated)}${views[route]}`;
+  const titles: Record<Route, string> = { entry: 'Авторизация', dashboard: 'Стартовая страница', courses: 'Курсы', test: 'Тесты', survey: 'Опросы', profile: 'Личный кабинет' };
+  const sidebar = state.authenticated ? `<nav class="side-nav" aria-label="Разделы обучения">${([['dashboard', 'Главная'], ['profile', 'Профиль'], ['courses', 'Курсы'], ['test', 'Тесты'], ['survey', 'Опросы']] as const).map(([path, label]) => `<a href="#/${path}" ${route === path ? 'aria-current="page"' : ''}>${label}</a>`).join('')}<button type="button" data-action="logout">Выход</button></nav>` : '';
+  root.innerHTML = `${header(route, state.authenticated)}<section class="page-title-band"><div><p><a href="#/dashboard">Главная</a><span> / </span>${titles[route]}</p><h1>${titles[route]}</h1></div></section><div class="page-layout ${state.authenticated ? '' : 'page-layout-entry'}">${sidebar}<div class="page-content">${views[route]}</div></div><footer class="site-footer"><div>Учебный портал ООО «НТС»</div></footer>`;
 };

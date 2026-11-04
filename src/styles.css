@@ -639,3 +639,45 @@ h1 { letter-spacing: -0.045em; line-height: 1.08; }
   .module-card, .progress-card { padding: 1.35rem; }
   .dashboard-section { margin-top: 1.5rem; }
 }
+
+body { background: #ededed; color: #303030; }
+.site-header { width: min(1180px, calc(100% - 3rem)); min-height: 138px; border: 0; }
+#app { background: linear-gradient(#fff 0 138px, #ededed 138px); }
+.brand-logo { padding: 0.1rem 0.35rem; color: white; background: #c9382d; font-size: 2rem; font-weight: 900; letter-spacing: 0.08em; border-bottom: 5px solid #242424; }
+.brand strong { color: #171721; font-size: 1.2rem; }
+.brand small { max-width: 16rem; color: #888; font-size: 0.82rem; line-height: 1.25; }
+.top-nav { color: #252531; font-weight: 600; text-transform: uppercase; font-size: 0.76rem; }
+.avatar-button, .button-primary { color: white; background: #e45450; border-color: #e45450; border-radius: 99px; }
+.page-title-band { background: #fff; box-shadow: 0 15px 35px rgba(0,0,0,.07); }
+.page-title-band > div { width: min(1180px, calc(100% - 3rem)); margin: auto; padding: 1.5rem 0 2rem; }
+.page-title-band p { padding-bottom: 1rem; margin-bottom: 1.3rem; color: #999; border-bottom: 1px solid #e4e4e4; font-size: .85rem; }
+.page-title-band a { color: #729bd2; text-decoration: underline; }
+.page-title-band h1 { margin: 0; color: #303030; font-size: 2rem; letter-spacing: -.03em; }
+.page-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 1.25rem; width: min(1180px, calc(100% - 3rem)); margin: auto; padding: 2rem 0 4rem; }
+.page-layout-entry { display: block; }
+.page-content { min-width: 0; }
+.side-nav { display: flex; flex-direction: column; align-items: stretch; gap: .15rem; }
+.side-nav a, .side-nav button { padding: .8rem 1rem; color: #555; text-align: left; font: inherit; font-size: .9rem; font-weight: 700; background: transparent; border: 0; border-radius: .65rem; cursor: pointer; }
+.side-nav a[aria-current="page"], .side-nav a:hover, .side-nav button:hover { background: #fff; color: #303030; }
+.portal-shell, .entry-shell { width: 100%; padding: 0; }
+.welcome-card { min-height: 250px; padding: 2.5rem; background: #c94037; border-radius: .8rem; }
+.welcome-card h1 { font-size: clamp(2rem, 3vw, 2.8rem); }
+.welcome-card .eyebrow { color: #fff; }
+.welcome-card > div:first-child > p:not(.eyebrow) { color: #fff4f1; }
+.welcome-card .button-primary { color: #c94037; background: #fff; border-color: #fff; }
+.entry-panel { color: #303030; background: #fff; border-radius: .8rem; }
+.entry-panel > p:not(.panel-kicker), .entry-form label { color: #666; }
+.entry-form input { background: #f5f5f5; border-color: #ddd; }
+.button-quiet { color: #d64c48; border-color: #e6b2ae; }
+.privacy-note { color: #777; }
+.site-footer { padding: 2rem 1.5rem; color: #eee; background: #10101b; font-size: .85rem; }
+.site-footer > div { max-width: 1180px; margin: auto; }
+@media (max-width: 760px) {
+  #app { background: #ededed; }
+  .site-header { width: 100%; min-height: 0; padding: 1rem; background: #fff; }
+  .page-title-band > div { width: calc(100% - 2rem); padding: 1rem 0 1.5rem; }
+  .page-layout { display: block; width: calc(100% - 2rem); padding: 1rem 0 2rem; }
+  .side-nav { flex-direction: row; overflow-x: auto; margin-bottom: 1rem; }
+  .side-nav a, .side-nav button { flex: none; padding: .7rem .8rem; }
+  .welcome-card { padding: 1.5rem; }
+}
