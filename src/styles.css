@@ -561,6 +561,21 @@ h1 em {
 .quick-grid small { color: #7d8794; font-size: 0.77rem; }
 .quick-grid .card-icon { grid-row: span 2; }
 
+.dashboard-section { margin-top: 2.6rem; }
+.section-title { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.section-title h2 { margin: 0; font-size: 1.7rem; letter-spacing: -0.05em; }
+.section-title > span { color: #7a8695; font-size: 0.78rem; }
+.briefing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.briefing-card { display: flex; gap: 0.8rem; min-height: 168px; padding: 1.2rem; background: #fff; border: 1px solid #e8e6e1; border-radius: 1rem; }
+.briefing-card > span { display: grid; flex: 0 0 2.6rem; width: 2.6rem; height: 2.6rem; place-items: center; color: #fff; font-size: 0.74rem; font-weight: 800; border-radius: 0.75rem; }
+.briefing-coral > span { background: #e04d37; }.briefing-blue > span { background: #477da9; }.briefing-gold > span { background: #bd8724; }
+.briefing-card small { color: #8a95a2; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }.briefing-card h3 { margin: 0.3rem 0 0.45rem; font-size: 1rem; letter-spacing: -0.03em; }.briefing-card p { margin: 0; color: #718092; font-size: 0.82rem; line-height: 1.45; }
+.split-section { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1rem; }
+.activity-panel, .tip-panel { position: relative; overflow: hidden; min-height: 250px; padding: 1.7rem; border-radius: 1.2rem; }
+.activity-panel { display: flex; justify-content: space-between; gap: 1rem; color: #fff; background: #223248; }.activity-panel h2, .tip-panel h2 { margin: 0.3rem 0 0.7rem; font-size: 1.65rem; line-height: 1.08; letter-spacing: -0.055em; }.activity-panel > div:first-child { position: relative; z-index: 1; max-width: 25rem; }.activity-panel > div:first-child > p:not(.eyebrow) { color: #c3cfde; line-height: 1.5; }.activity-panel a { display: inline-flex; gap: 0.4rem; align-items: center; color: #ff8777; font-size: 0.84rem; font-weight: 800; }.activity-panel a svg { width: 1rem; }
+.badge-stack { position: relative; flex: 0 0 9rem; align-self: center; width: 9rem; height: 9rem; }.badge-stack span { position: absolute; display: grid; width: 5rem; height: 5rem; place-items: center; color: #fff; font-size: 1.2rem; font-weight: 900; background: #e04d37; border: 5px solid #223248; border-radius: 50%; }.badge-stack span:nth-child(1) { top: 0; right: 0; }.badge-stack span:nth-child(2) { top: 2.6rem; left: 0; background: #f2b34d; }.badge-stack span:nth-child(3) { right: 0.6rem; bottom: 0; background: #4a83ad; }
+.tip-panel { background: #f5dfcf; }.tip-panel::after { position: absolute; right: -2rem; bottom: -4rem; width: 11rem; height: 11rem; border: 1.5rem solid rgba(212, 107, 60, 0.2); border-radius: 50%; content: ''; }.tip-symbol { display: grid; width: 2.3rem; height: 2.3rem; margin-bottom: 1rem; place-items: center; color: #c74730; background: #fff4e9; border-radius: 0.7rem; }.tip-panel h2 { max-width: 22rem; color: #432b29; }.tip-panel > p:not(.eyebrow) { position: relative; z-index: 1; max-width: 24rem; margin: 0; color: #7e5a52; line-height: 1.5; }
+
 .learning-page { padding-top: 2rem; }
 .page-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.6rem; }
 .page-heading h1, .survey-card h1, .profile-hero h1 { margin-bottom: 0.45rem; font-size: clamp(2.25rem, 4vw, 4rem); }
@@ -596,6 +611,7 @@ h1 em {
   .welcome-card { min-height: auto; }
   .welcome-orbit { display: none; }
   .stats-grid, .dashboard-grid, .quick-grid { grid-template-columns: 1fr; }
+  .briefing-grid, .split-section { grid-template-columns: 1fr; }
   .page-heading, .profile-hero { align-items: flex-start; flex-direction: column; }
   .course-grid, .results-grid { grid-template-columns: 1fr; }
   .profile-hero .button { margin-left: 0; }

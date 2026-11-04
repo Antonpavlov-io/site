@@ -25,6 +25,16 @@ export const courses: Course[] = [
   { id: 'team-rhythm', category: 'Команда', title: 'Ритм команды', description: 'Договорённости, которые помогают смене работать спокойнее.', duration: '6 минут', tone: 'blue' },
   { id: 'safe-service', category: 'Безопасность', title: 'Безопасная подача', description: 'Небольшие привычки, которые делают сервис надёжнее.', duration: '10 минут', tone: 'gold' },
   { id: 'warm-dialogue', category: 'Сервис', title: 'Тёплый диалог', description: 'Слова и интонации для простого человеческого контакта.', duration: '7 минут', tone: 'ink' },
+  { id: 'first-five-minutes', category: 'Сервис', title: 'Первые пять минут', description: 'Как задать тон встрече и быстро сориентировать гостя.', duration: '5 минут', tone: 'coral' },
+  { id: 'clear-handover', category: 'Команда', title: 'Передача смены', description: 'Короткий алгоритм, чтобы важное не потерялось в пути.', duration: '9 минут', tone: 'blue' },
+  { id: 'calm-conflict', category: 'Безопасность', title: 'Спокойный диалог', description: 'Как действовать при сложной просьбе без лишнего напряжения.', duration: '12 минут', tone: 'gold' },
+  { id: 'smart-display', category: 'Сервис', title: 'Подача без суеты', description: 'Порядок действий, который сохраняет темп и внимание к деталям.', duration: '7 минут', tone: 'ink' },
+];
+
+export const weeklyBriefs = [
+  { day: 'Пн', title: 'Внимание к маршруту', text: 'Проверьте стартовую подготовку точки до прихода первых гостей.', accent: 'coral' },
+  { day: 'Ср', title: 'Ясные договорённости', text: 'Обсудите с коллегой одну задачу, которую можно передавать проще.', accent: 'blue' },
+  { day: 'Пт', title: 'Минута обратной связи', text: 'Отметьте один приём, который помог сделать сервис теплее.', accent: 'gold' },
 ];
 
 export const testQuestions = [

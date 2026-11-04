@@ -1,4 +1,4 @@
-import { courses, currentModule, portalStats, testQuestions } from './content';
+import { courses, currentModule, portalStats, testQuestions, weeklyBriefs } from './content';
 import { getProgressPercent } from './progress';
 import { resolveRoute, type Route } from './router';
 import type { PortalState } from './types';
@@ -105,6 +105,14 @@ const dashboardView = (state: PortalState): string => `
     <section class="quick-grid">
       <a href="#/test"><span class="card-icon">${icon('chart')}</span><strong>Проверить знания</strong><small>4 коротких вопроса</small></a>
       <a href="#/survey"><span class="card-icon">${icon('spark')}</span><strong>Оставить отзыв</strong><small>анонимно, в этом браузере</small></a>
+    </section>
+    <section class="dashboard-section">
+      <div class="section-title"><div><p class="eyebrow">Небольшой фокус</p><h2>На этой неделе</h2></div><span>3 шага для команды</span></div>
+      <div class="briefing-grid">${weeklyBriefs.map((brief, index) => `<article class="briefing-card briefing-${brief.accent}"><span>${brief.day}</span><div><small>Шаг ${index + 1}</small><h3>${brief.title}</h3><p>${brief.text}</p></div></article>`).join('')}</div>
+    </section>
+    <section class="dashboard-section split-section">
+      <article class="activity-panel"><div><p class="eyebrow">Коллекция навыков</p><h2>Ваш следующий маленький шаг</h2><p>Пройдите любой модуль, чтобы открыть первый знак прогресса.</p><a href="#/courses">Выбрать модуль ${icon('arrow')}</a></div><div class="badge-stack" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div></article>
+      <article class="tip-panel"><span class="tip-symbol">✦</span><p class="eyebrow">Подсказка дня</p><h2>Один точный вопрос часто полезнее длинного объяснения.</h2><p>Попробуйте начать разговор с гостем с простого: «Чем я могу помочь прямо сейчас?»</p></article>
     </section>
   </main>`;
 
