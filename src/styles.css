@@ -538,8 +538,8 @@ h1 em {
 
 .progress-card { text-align: center; }
 .progress-card .eyebrow { text-align: left; }
-.progress-ring { display: grid; width: 7rem; height: 7rem; margin: 0.5rem auto 1rem; place-items: center; border: 0.72rem solid #f4ded9; border-top-color: #e04d37; border-radius: 50%; transform: rotate(calc(3.6deg * var(--progress, 10))); }
-.progress-ring strong { color: #172132; font-size: 1.8rem; letter-spacing: -0.07em; transform: rotate(-35deg); }
+.progress-ring { display: grid; width: 7rem; height: 7rem; margin: 0.5rem auto 1rem; place-items: center; border-radius: 50%; background: radial-gradient(closest-side, #fff 82%, transparent 83%), conic-gradient(#e04d37 calc(var(--progress, 0) * 1%), #f4ded9 0); }
+.progress-ring strong { color: #172132; font-size: 1.8rem; letter-spacing: -0.07em; }
 .progress-ring small { font-size: 0.9rem; }
 .progress-card > p:not(.eyebrow) { color: #768293; font-size: 0.84rem; line-height: 1.5; }
 
