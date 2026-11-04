@@ -1,7 +1,7 @@
 export const portalStats = [
-  { value: '4', label: 'учебных модуля' },
-  { value: '12', label: 'минут до результата' },
-  { value: '0', label: 'данных вне браузера' },
+  { value: '8', label: 'учебных тем' },
+  { value: '4', label: 'вопроса в тесте' },
+  { value: '3', label: 'направления обучения' },
 ];
 
 export const currentModule = {

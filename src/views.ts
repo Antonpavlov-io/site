@@ -41,11 +41,11 @@ const header = (activeRoute: Route, authenticated: boolean): string => `
 const entryView = (): string => `
   <main class="entry-shell">
     <section class="entry-copy">
-      <p class="eyebrow">Платформа навыков для команды</p>
-      <h1>Сервис, который<br><em>остаётся с гостем.</em></h1>
-      <p class="lead">Короткие модули, проверка знаний и понятный личный прогресс — в одном спокойном рабочем пространстве.</p>
+      <p class="eyebrow">Обучение сотрудников</p>
+      <h1>Учебный портал<br><em>вагона-ресторана</em></h1>
+      <p class="lead">Материалы по обслуживанию гостей, работе в команде и безопасности. Выберите тему и проверьте свои знания.</p>
       <div class="feature-pills">
-        <span>${icon('spark')} 4 мини-модуля</span>
+        <span>${icon('book')} ${courses.length} учебных тем</span>
         <span>${icon('chart')} личный прогресс</span>
       </div>
     </section>
@@ -63,13 +63,11 @@ const entryView = (): string => `
       <p class="privacy-note">${icon('shield')} Это не защищённый аккаунт. Прогресс хранится только в cookie этого браузера.</p>
     </section>
     <aside class="rail-card" aria-label="Преимущества платформы">
-      <div class="rail-window"><span></span><span></span><span></span></div>
       <div class="rail-card-content">
-        <span class="rail-tag">Новый маршрут</span>
-        <h2>Учиться в своём темпе — даже между рейсами.</h2>
-        <p>Один короткий модуль за раз. Без перегруза и лишних форм.</p>
+        <span class="rail-tag">В программе</span>
+        <h2>Обслуживание, командная работа и безопасность</h2>
+        <p>Учебные темы и проверочные вопросы доступны после входа.</p>
       </div>
-      <div class="rail-metric"><strong>08</strong><span>минут<br>на модуль</span></div>
     </aside>
   </main>`;
 
@@ -78,11 +76,10 @@ const dashboardView = (state: PortalState): string => `
     <section class="welcome-card">
       <div>
         <p class="eyebrow">Добро пожаловать, ${escapeHtml(state.nickname)}</p>
-        <h1>Ваш маршрут на сегодня</h1>
-        <p>Выберите короткую тему, отметьте пройденное и посмотрите, как растёт ваш личный прогресс.</p>
+        <h1>Обучение сотрудников</h1>
+        <p>Выберите тему, отметьте пройденные материалы и проверьте свои знания.</p>
         <a class="button button-primary" href="#/courses">Открыть модули ${icon('arrow')}</a>
       </div>
-      <div class="welcome-orbit" aria-hidden="true"><span></span><span></span><b>${icon('spark')}</b></div>
     </section>
     <section class="stats-grid" aria-label="Статистика платформы">
       ${portalStats.map((stat) => `<article><strong>${stat.value}</strong><span>${stat.label}</span></article>`).join('')}
@@ -107,12 +104,8 @@ const dashboardView = (state: PortalState): string => `
       <a href="#/survey"><span class="card-icon">${icon('spark')}</span><strong>Оставить отзыв</strong><small>анонимно, в этом браузере</small></a>
     </section>
     <section class="dashboard-section">
-      <div class="section-title"><div><p class="eyebrow">Небольшой фокус</p><h2>На этой неделе</h2></div><span>3 шага для команды</span></div>
+      <div class="section-title"><div><p class="eyebrow">Памятка</p><h2>Перед сменой</h2></div><span>Три полезных напоминания</span></div>
       <div class="briefing-grid">${weeklyBriefs.map((brief, index) => `<article class="briefing-card briefing-${brief.accent}"><span>${brief.day}</span><div><small>Шаг ${index + 1}</small><h3>${brief.title}</h3><p>${brief.text}</p></div></article>`).join('')}</div>
-    </section>
-    <section class="dashboard-section split-section">
-      <article class="activity-panel"><div><p class="eyebrow">Коллекция навыков</p><h2>Ваш следующий маленький шаг</h2><p>Пройдите любой модуль, чтобы открыть первый знак прогресса.</p><a href="#/courses">Выбрать модуль ${icon('arrow')}</a></div><div class="badge-stack" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div></article>
-      <article class="tip-panel"><span class="tip-symbol">✦</span><p class="eyebrow">Подсказка дня</p><h2>Один точный вопрос часто полезнее длинного объяснения.</h2><p>Попробуйте начать разговор с гостем с простого: «Чем я могу помочь прямо сейчас?»</p></article>
     </section>
   </main>`;
 

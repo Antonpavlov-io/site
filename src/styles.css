@@ -561,6 +561,21 @@ h1 em {
 .quick-grid small { color: #7d8794; font-size: 0.77rem; }
 .quick-grid .card-icon { grid-row: span 2; }
 
+body { background: #f4f4f2; }
+.site-header { min-height: 84px; border-bottom: 1px solid #dcdedb; }
+h1 { letter-spacing: -0.045em; line-height: 1.08; }
+.entry-copy h1 { font-size: clamp(2.6rem, 4.2vw, 4.5rem); }
+.entry-panel, .rail-card, .welcome-card, .module-card, .progress-card, .quick-grid a, .stats-grid article, .course-card { border-radius: 0.55rem; box-shadow: none; }
+.panel-glow, .rail-card::after { display: none; }
+.rail-card { min-height: 190px; color: #263244; background: #e7e9e7; }
+.rail-card p { color: #596574; }
+.rail-tag { color: #a83b30; background: #fff; }
+.welcome-card { min-height: 230px; background: #263244; }
+.welcome-card h1 { font-size: clamp(2.2rem, 3.5vw, 3.3rem); }
+.briefing-card { border-radius: 0.55rem; }
+.briefing-card > span { color: #a83b30; background: #f5e9e6; border-radius: 0.35rem; }
+.course-symbol { color: #a83b30 !important; background: #f6eae7 !important; border-radius: 0.35rem; }
+
 .dashboard-section { margin-top: 2.6rem; }
 .section-title { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .section-title h2 { margin: 0; font-size: 1.7rem; letter-spacing: -0.05em; }
@@ -601,7 +616,8 @@ h1 em {
 
 @media (max-width: 760px) {
   .site-header { width: min(100% - 2rem, 1180px); min-height: 76px; }
-  .top-nav { display: none; }
+  .site-header { flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; }
+  .top-nav { display: flex; order: 3; width: 100%; gap: 1.25rem; margin: 0; padding-top: 0.5rem; }
   .avatar-button { margin-left: auto; }
   .entry-shell { grid-template-columns: 1fr; width: min(100% - 2rem, 1180px); padding-top: 2rem; }
   .entry-copy { padding: 0; }
