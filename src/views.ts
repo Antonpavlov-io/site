@@ -1,4 +1,4 @@
-import { courses, currentModule, portalStats, testQuestions, weeklyBriefs } from './content';
+import { courses, courseLessons, currentModule, portalStats, testQuestions, weeklyBriefs } from './content';
 import { getProgressPercent } from './progress';
 import { resolveRoute, type Route } from './router';
 import type { PortalState } from './types';
@@ -122,6 +122,7 @@ const coursesView = (state: PortalState): string => `
           <div class="course-card-top"><span>${course.category}</span><small>0${index + 1}</small></div>
           <div class="course-symbol">${icon(index % 2 === 0 ? 'book' : 'spark')}</div>
           <h2>${course.title}</h2><p>${course.description}</p>
+          <details class="course-lesson"><summary>Открыть материал</summary><div><h3>На что обратить внимание</h3><ul>${courseLessons[course.id].points.map((point) => `<li>${point}</li>`).join('')}</ul><h3>Пример ситуации</h3><p>${courseLessons[course.id].example}</p><small>Учебный пример. В работе руководствуйтесь действующими инструкциями организации.</small></div></details>
           <footer><span>${course.duration}</span><button class="course-action ${completed ? 'is-complete' : ''}" type="button" data-action="complete-course" data-course-id="${course.id}" ${completed ? 'disabled' : ''}>${completed ? 'Пройдено' : 'Отметить пройденным'}</button></footer>
         </article>`;
       }).join('')}

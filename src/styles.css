@@ -610,6 +610,14 @@ h1 { letter-spacing: -0.045em; line-height: 1.08; }
 .course-card-coral .course-symbol { background: #e04d37; }.course-card-blue .course-symbol { background: #3f719f; }.course-card-gold .course-symbol { background: #c28b24; }.course-card-ink .course-symbol { background: #273a52; }
 .course-card h2 { margin: 0 0 0.45rem; font-size: 1.5rem; letter-spacing: -0.045em; }.course-card p { min-height: 3.4rem; margin-bottom: 1.3rem; color: #6b7787; line-height: 1.5; }
 .course-card footer { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid #edece9; color: #778294; font-size: 0.8rem; }
+.course-lesson { margin: 0 0 1rem; color: #444; font-size: .9rem; line-height: 1.55; }
+.course-lesson summary { color: #d64c48; font-weight: 700; cursor: pointer; }
+.course-lesson div { padding: .5rem 0; }
+.course-lesson h3 { margin: 1rem 0 .35rem; font-size: .9rem; }
+.course-lesson ul { padding-left: 1.2rem; margin: 0; }
+.course-lesson li + li { margin-top: .4rem; }
+.course-lesson p { min-height: 0; margin: 0 0 .75rem; font-size: .9rem; }
+.course-lesson small { color: #777; }
 .course-action { padding: 0.55rem 0.72rem; color: #d83f2f; font-size: 0.75rem; font-weight: 800; background: #fff5f2; border: 0; border-radius: 0.55rem; cursor: pointer; }.course-action.is-complete { color: #21735d; background: #e8f5ef; cursor: default; }
 .score-chip { padding: 1rem 1.25rem; color: #647083; font-size: 0.8rem; background: #fff; border: 1px solid #e8e6e1; border-radius: 0.8rem; }.score-chip strong { display: block; margin-top: 0.15rem; color: #e04d37; font-size: 1.5rem; }
 .quiz-card { display: grid; gap: 1rem; padding: clamp(1.2rem, 3vw, 2rem); background: #fff; border: 1px solid #e6e5e1; border-radius: 1.2rem; }.quiz-card fieldset { margin: 0; padding: 0 0 1.2rem; border: 0; border-bottom: 1px solid #eceae7; }.quiz-card legend { display: flex; gap: 0.65rem; align-items: flex-start; margin-bottom: 0.85rem; font-weight: 800; line-height: 1.4; }.quiz-card legend span { display: grid; flex: 0 0 1.65rem; width: 1.65rem; height: 1.65rem; place-items: center; color: #e04d37; font-size: 0.7rem; background: #fff1ee; border-radius: 50%; }
