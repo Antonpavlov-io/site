@@ -515,6 +515,9 @@ h1 em {
   padding: 1.7rem;
 }
 
+.module-card .card-icon { margin-bottom: 1rem; }
+.module-card .eyebrow { margin-bottom: 0.65rem; }
+
 .module-card h2 { margin: 0 0 0.7rem; font-size: 1.85rem; letter-spacing: -0.055em; }
 .module-card > p:not(.eyebrow) { max-width: 34rem; color: #687587; line-height: 1.55; }
 .module-card footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eceae7; color: #778294; font-size: 0.82rem; }
@@ -560,6 +563,7 @@ h1 em {
 .quick-grid strong { align-self: end; }
 .quick-grid small { color: #7d8794; font-size: 0.77rem; }
 .quick-grid .card-icon { grid-row: span 2; }
+.quick-grid small { margin-top: 0.2rem; }
 
 body { background: #f4f4f2; }
 .site-header { min-height: 84px; border-bottom: 1px solid #dcdedb; }
@@ -576,7 +580,7 @@ h1 { letter-spacing: -0.045em; line-height: 1.08; }
 .briefing-card > span { color: #a83b30; background: #f5e9e6; border-radius: 0.35rem; }
 .course-symbol { color: #a83b30 !important; background: #f6eae7 !important; border-radius: 0.35rem; }
 
-.dashboard-section { margin-top: 2.6rem; }
+.dashboard-section { margin-top: 2rem; }
 .section-title { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .section-title h2 { margin: 0; font-size: 1.7rem; letter-spacing: -0.05em; }
 .section-title > span { color: #7a8695; font-size: 0.78rem; }
@@ -632,4 +636,6 @@ h1 { letter-spacing: -0.045em; line-height: 1.08; }
   .course-grid, .results-grid { grid-template-columns: 1fr; }
   .profile-hero .button { margin-left: 0; }
   .module-card footer { align-items: start; flex-direction: column; }
+  .module-card, .progress-card { padding: 1.35rem; }
+  .dashboard-section { margin-top: 1.5rem; }
 }
